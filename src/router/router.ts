@@ -3,7 +3,7 @@ import index from './routes/index';
 const router = new Elysia();
 
 router.group('/api', app => app
-  .get('/', context => index(context))
+  .use(index)
   )
 
 export default router;
