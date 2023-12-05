@@ -1,6 +1,6 @@
-import { Context } from "elysia";
+import { Elysia } from "elysia";
 
-export default function index(context: Context) {
+export default (app: Elysia) => app.get('/', (context) => {
   
   context.set.status = 200;
 
@@ -9,4 +9,4 @@ export default function index(context: Context) {
     message: 'Hello, World!'
   });
   
-}
+})
